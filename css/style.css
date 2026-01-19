@@ -1,0 +1,365 @@
+/* 
+Lizar Business HTML Template 
+
+*/
+/************ TABLE OF CONTENTS ***************
+
+1. Fonts
+2. Reset
+3. Global
+4. Main Header / Two / Three
+5. Main Slider / Two / Three
+6. About One
+7. Services One / Two / Three / Four
+8. Project One / Two / Three
+9. Testimonial One / Two / Three
+10. Partners One
+11. News One / Two
+12. CTA One
+13. Main Footer
+14. Clients One / Two / Three
+15. Counter One
+16. News Three
+17. InTouch One
+18. Page Title
+19. Banner One
+20. Work One
+21. Pricing One
+22. Team One
+23. Services Widgets
+24. Services Detail
+25. Our Projects
+26. Projects Detail
+27. Projects Widgets
+28. Our Blog
+29. Blog Widgets
+30. Comment Form
+31. Comment Box
+32. Contact Info
+33. Contact Form
+34. Map
+
+**********************************************/
+
+
+
+/*** 
+====================================================================
+	Css Files
+====================================================================
+***/
+@import url('01-global.css');
+@import url('module-css/header.css');
+@import url('module-css/footer.css');
+@import url('module-css/feature.css');
+@import url('module-css/solutions.css');
+@import url('module-css/pricing.css');
+@import url('module-css/brand.css');
+@import url('module-css/collaboration.css');
+@import url('module-css/testimonial.css');
+@import url('module-css/faq.css');
+@import url('module-css/free-trail.css');
+@import url('module-css/copywriting-tool.css');
+@import url('module-css/how-tool-work.css');
+@import url('module-css/counter.css');
+@import url('module-css/case.css');
+@import url('module-css/banner.css');
+@import url('module-css/gallery.css');
+@import url('module-css/image-generator-tools.css');
+@import url('module-css/art-and-image-tool.css');
+@import url('module-css/amazing-art-tool.css');
+@import url('module-css/create-something.css');
+@import url('module-css/page-title.css');
+@import url('module-css/about.css');
+@import url('module-css/video.css');
+@import url('module-css/team.css');
+@import url('module-css/ai-product.css');
+@import url('module-css/login.css');
+@import url('module-css/reset-password.css');
+@import url('module-css/contact.css');
+@import url('module-css/blog.css');
+@import url('module-css/career.css');
+@import url('module-css/404.css');
+
+
+
+
+@import url('02-bootstrap-select.min.css');
+@import url('03-owl.css');
+@import url('04-animate.css');
+@import url('05-rtl.css');
+@import url('06-custom-animate.css');
+@import url('07-dark-body.css');
+@import url('08-font-awesome.css');
+@import url('09-icomoon.css');
+@import url('10-jarallax.css');
+@import url('11-preloader.css');
+@import url('12-swiper.min.css');
+@import url('13-odometer-theme-default.css');
+@import url('14-jquery-ui.css');
+@import url('15-magnific-popup.css');
+@import url('../fonts/reey-font/stylesheet.css');
+
+
+
+/*** 
+====================================================================
+	
+====================================================================
+***/
+
+
+/* Sticy Header */
+.want-sticky-header .main-header.fixed-header {
+	position: relative !important;
+	display: none;
+}
+
+
+/* Box Layout */
+.box-layout .page-wrapper {
+	max-width: 1390px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 15px;
+	overflow: hidden;
+	background-color: var(--thm-body-bg);
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.10);
+}
+
+.box-layout:before {
+	position: fixed;
+	content: '';
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	display: block;
+	background: url(../images/partners/thm-pattern-2.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.box-layout .slider-one_social-icons {
+	display: none;
+}
+
+.box-layout .main-header-two__inner {
+	margin: 0 0px;
+}
+
+/* Text animation */
+.animate-text {
+  animation: fadeUp 1.2s ease-out forwards;
+}
+
+.animate-text span {
+  color: #00ffcc;
+  animation: glow 1.5s infinite alternate;
+}
+
+/* Button pulse */
+.pulse-btn {
+  animation: pulse 1.6s infinite;
+}
+
+/* Keyframes */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 255, 204, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 18px rgba(0, 255, 204, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 255, 204, 0);
+  }
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px rgba(0,255,204,0.4);
+  }
+  to {
+    text-shadow: 0 0 25px rgba(0,255,204,0.9);
+  }
+}
+
+/* ================= ORBIT FULL WIDTH RESPONSIVE ================= */
+
+.orbit-section {
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: radial-gradient(circle at center, #0f1b2d 0%, #050914 75%);
+}
+
+/* حجم المدار يتغير حسب الشاشة */
+.bot-orbit {
+  position: relative;
+  width: min(90vw, 700px);
+  height: min(90vw, 700px);
+}
+
+/* الشمس */
+.bot-core {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(110px, 16vw, 160px);
+  height: clamp(110px, 16vw, 160px);
+  border-radius: 50%;
+  background: radial-gradient(circle, #00ffcc, #008c6e);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 90px rgba(0,255,204,.9);
+  animation: sunPulse 3s infinite;
+  z-index: 5;
+}
+
+.bot-core img {
+  width: clamp(40px, 5vw, 55px);
+}
+
+.bot-core span {
+  font-size: clamp(11px, 1.5vw, 14px);
+  font-weight: 700;
+  margin-top: 6px;
+}
+
+/* المدارات */
+.orbit {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  transform-origin: center;
+  border-radius: 50%;
+  border: 1px dashed rgba(255,255,255,.15);
+}
+
+.orbit-1 { width: 45%; height: 45%; animation: rotate 12s linear infinite; }
+.orbit-2 { width: 60%; height: 60%; animation: rotateReverse 18s linear infinite; }
+.orbit-3 { width: 75%; height: 75%; animation: rotate 26s linear infinite; }
+.orbit-4 { width: 90%; height: 90%; animation: rotateReverse 36s linear infinite; }
+
+/* الكواكب */
+.planet {
+  position: absolute;
+  top: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #00ffcc;
+  font-size: clamp(10px, 1.2vw, 13px);
+}
+
+.planet img {
+  width: clamp(26px, 4vw, 40px);
+  margin-bottom: 4px;
+}
+
+/* Hover تفاعلي */
+.planet:hover {
+  transform: translateX(-50%) scale(1.15);
+  filter: drop-shadow(0 0 12px #00ffcc);
+}
+
+/* Animations */
+@keyframes rotate {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes rotateReverse {
+  from { transform: translate(-50%, -50%) rotate(360deg); }
+  to { transform: translate(-50%, -50%) rotate(0deg); }
+}
+
+@keyframes sunPulse {
+  0% { box-shadow: 0 0 35px rgba(0,255,204,.6); }
+  50% { box-shadow: 0 0 110px rgba(0,255,204,1); }
+  100% { box-shadow: 0 0 35px rgba(0,255,204,.6); }
+}
+
+/* ================= MOBILE OPTIMIZATION ================= */
+@media (max-width: 768px) {
+  .orbit-4 { display: none; } /* تقليل الزحمة */
+}
+
+
+.simple-footer {
+  background: #070b14;
+  padding: 50px 0 30px;
+  text-align: center;
+}
+
+.footer-about {
+  max-width: 700px;
+  margin: 0 auto 20px;
+  font-size: 14px;
+  line-height: 1.7;
+  opacity: 0.7;
+}
+
+.footer-copy {
+  font-size: 13px;
+  opacity: 0.5;
+}
+
+/* Main Neon Title */
+.alpha-neon-title {
+	font-size: 48px;
+	font-weight: 800;
+	background: linear-gradient(90deg, #00e5ff, #7f5af0, #00ff9c);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-shadow: 0 0 25px rgba(0,229,255,0.35);
+	margin-bottom: 10px;
+}
+
+/* Subtitle under main title */
+.alpha-neon-sub {
+	color: #a9b4ff;
+	font-size: 16px;
+	letter-spacing: 0.3px;
+}
+
+/* Section Title */
+.alpha-section-title {
+	font-size: 32px;
+	font-weight: 700;
+	color: #ffffff;
+	text-shadow: 0 0 15px rgba(127,90,240,0.4);
+	margin-bottom: 10px;
+}
+
+/* Section Sub Text */
+.alpha-section-sub {
+	color: #bfc6ff;
+	font-size: 15px;
+	line-height: 1.6;
+	max-width: 520px;
+	margin: 0 auto 30px;
+}
+
+
+body {
+  overflow-x: hidden;
+}
